@@ -19,21 +19,20 @@ Fluent:Notify({
     Duration = 6  -- Set to nil to make the notification not disappear
 })
 
--- Create tabs
+-- Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
     Main = Window:AddTab({ Title = "fish 🐟", Icon = "" }),
     BloxFruits = Window:AddTab({ Title = "🍎 Blox Fruits", Icon = "" }),
-    BeeSwarm = Window:AddTab({ Title = "🐝 Bee Swarm Simulator", Icon = "🐝" }),
-    Peroxide = Window:AddTab({ Title = "peroxide", Icon = "🍐" }),
-    MM2 = Window:AddTab({ Title = "mm2", Icon = "🔪" })
+    BeeSwarm = Window:AddTab({ Title = "🐝 Bee Swarm Simulator", Icon = "🐝" })
 }
 
--- Main Tab Content
+-- Add content to the Main Tab
 Tabs.Main:AddParagraph({
     Title = "Hello",
     Content = "Hello"
 })
 
+-- Add buttons to Main Tab
 Tabs.Main:AddButton({
     Title = "Native lab",
     Callback = function()
@@ -69,7 +68,36 @@ Tabs.Main:AddButton({
     end
 })
 
--- Blox Fruits Tab Content
+-- Add more buttons to the Main Tab
+Tabs.Main:AddButton({
+    Title = "Speed Hub X",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+    end
+})
+
+Tabs.Main:AddButton({
+    Title = "Raito Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Efe0626/RaitoHub/main/Script"))()
+    end
+})
+
+Tabs.Main:AddButton({
+    Title = "Banana Cat Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaHub.lua"))()
+    end
+})
+
+Tabs.Main:AddButton({
+    Title = "Kiciahook",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/kiciahook/kiciahook/refs/heads/main/loader.lua"))()
+    end
+})
+
+-- Add buttons to Blox Fruits Tab
 Tabs.BloxFruits:AddButton({
     Title = "alchemyhub",
     Callback = function()
@@ -81,12 +109,100 @@ Tabs.BloxFruits:AddButton({
     Title = "Banana Cat Hub",
     Callback = function()
         repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
-        getgenv().Key = "PASTE_KEY_HERE"  -- Set your key here
+        getgenv().Key = "PASTE_KEY_HERE"
         loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaHub.lua"))()
     end
 })
 
--- Bee Swarm Tab Content
+Tabs.BloxFruits:AddButton({
+    Title = "Speed Hub X",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"))()
+    end
+})
+
+Tabs.BloxFruits:AddButton({
+    Title = "Raito Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Efe0626/RaitoHub/main/Script"))()
+    end
+})
+
+Tabs.BloxFruits:AddButton({
+    Title = "Ho ho hub",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/ascn123/HOHO_H/main/Loading_UI'))()
+    end
+})
+
+Tabs.BloxFruits:AddButton({
+    Title = "inf chest script",
+    Callback = function()
+        _G.Team = "Marine"  -- "Marine" or "Pirate"
+        _G.MetodeTeleport = "Instant"  -- "Instant" or "Tween"
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ThundarZ/Welcome/refs/heads/main/Main/BloxFruit/Chest/AllDevices.lua"))()
+    end
+})
+
+Tabs.BloxFruits:AddButton({
+    Title = "W-azure hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
+    end
+})
+
+Tabs.BloxFruits:AddButton({
+    Title = "Redz hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))()
+    end
+})
+
+Tabs.BloxFruits:AddButton({
+    Title = "ronix hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/513ccdb3ae8a61d4d7698fc337e5256d.lua"))()
+    end
+})
+
+Tabs.BloxFruits:AddButton({
+    Title = "get everything script",
+    Callback = function()
+        getgenv().simple_settings = {
+            ["MASTERY"] = {
+                ["ACTIVE"] = true,
+                ["METHOD"] = "Half",  -- Method for gaining mastery, "Half"[300] or "Full"[600]
+            },
+            ["OBJECTIVE"] = {
+                ["GODHUMAN"] = true,
+                ["RACE-V3"] = true,
+                ["FRAGMENT"] = 100000,
+                -- SWORD
+                ["CANVANDER"] = true,
+                ["BUDDY-SWORD"] = true,
+                ["CURSED-DUAL-KATANA"] = true,
+                ["SHARK-ANCHOR"] = true,  -- soon.
+                -- GUN
+                ["ACIDUM-RIFLE"] = true,
+                ["VENOM-BOW"] = true,
+                ["SOUL-GUITAR"] = true,
+            },
+            ["FRUITPURCHASE"] = true,
+            ["PRIORITYFRUIT"] = {
+                [1] = "Dragon-Dragon",
+                [2] = "Flame-Flame",
+                [3] = "Rumble-Rumble",
+                [4] = "Human-Human: Buddha",
+                [5] = "Dark-Dark",
+            },
+            ["FPSCAP"] = 30,
+            ["LOWTEXTURE"] = true
+        }
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/simple-hubs/contents/refs/heads/main/bloxfruit-kaitan-main.lua"))()
+    end
+})
+
+-- Add buttons to Bee Swarm Simulator Tab
 Tabs.BeeSwarm:AddButton({
     Title = "Verbal Hub",
     Callback = function()
@@ -108,79 +224,89 @@ Tabs.BeeSwarm:AddButton({
     end
 })
 
--- Peroxide Tab Content
-Tabs.Peroxide:AddButton({
+Tabs.BeeSwarm:AddButton({
+    Title = "Macro V3",
+    Callback = function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/bc8c5c45c26f8e4cdb060277b0bbcab7.lua"))()
+    end
+})
+
+Tabs.BeeSwarm:AddButton({
+    Title = "Histy Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/Histy"))()
+    end
+})
+local Tabs = {
+    Main = Window:AddTab({ Title = "peroxide", Icon = "🍐" }),
+}
+Tabs.Main:AddButton({
     Title = "xtrey10x-hub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xtrey10x/xtrey10x-hub/main/Peroxide"))()
     end
 })
-
-Tabs.Peroxide:AddButton({
-    Title = "key of xtrey hub",
+Tabs.Main:AddButton({
+    Title = "Current Key: Keyupdate5542",
     Callback = function()
-        -- Set your key here
-        getgenv().Key = "Keyupdate5542"  -- Example key setup
+        
     end
 })
-
--- MM2 Tab Content
-Tabs.MM2:AddButton({
+local Tabs = {
+    Main = Window:AddTab({ Title = "mm2", Icon = "🔪" }),
+}
+Tabs.Main:AddButton({
     Title = "solix",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Dexz00/DzHub/refs/heads/main/Jujutsu%20Infinite"))()
     end
 })
-
-Tabs.MM2:AddButton({
+Tabs.Main:AddButton({
     Title = "swirl hub",
     Callback = function()
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/FlamesGamesO/FlamezHub/refs/heads/main/mm2script.lua'), true))()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/FlamesGamesO/FlamezHub/refs/heads/main/mm2script.lua'),true))()
     end
 })
-
-Tabs.MM2:AddButton({
+Tabs.Main:AddButton({
     Title = "forge hub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Skzuppy/forge-hub/main/loader.lua"))()
     end
 })
-
-Tabs.MM2:AddButton({
+Tabs.Main:AddButton({
     Title = "vertex hub",
     Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/vertex-peak/vertex/refs/heads/main/loadstring'))()
     end
 })
-
-Tabs.MM2:AddButton({
-    Title = "YARHM hub",
+Tabs.Main:AddButton({
+    Title = " YARHM hub",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Joystickplays/psychic-octo-invention/main/yarhm.lua", true))()  
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Joystickplays/psychic-octo-invention/main/yarhm.lua", true))() 
     end
 })
-
-Tabs.MM2:AddButton({
+Tabs.Main:AddButton({
     Title = "kidatchi",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/KidichiHB/Kidachi/main/Scripts/MM2", true))()  
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/KidichiHB/Kidachi/main/Scripts/MM2", true))() 
     end
 })
-
-Tabs.MM2:AddButton({
+Tabs.Main:AddButton({
     Title = "mobile + pc script op",
     Callback = function()
-        -- Best configs that don't kick you
-        _G.AutofarmSettings = {
-            AntiAfk = true, 
-            DelayFarm = 2.15,
-            ResetWhenFullBag = true,
-            CoinType = "BeachBall",
-            Disable3DRendering = false,
-            ImproveFPS = false,
-            StartAutofarm = false
-        }
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/NoCapital2/MM2Autofarm/main/script"))()  
+        --Best configs that dont kick you:
+_G.AutofarmSettings = {
+    AntiAfk = true, 
+    DelayFarm = 2.15,
+    ResetWhenFullBag = true,
+    CoinType = "BeachBall",
+    Disable3DRendering = false,
+    ImproveFPS = false,
+    StartAutofarm = false
+}
+--You can set StartAutofarm to true if you want put autofarm to autoexec
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NoCapital2/MM2Autofarm/main/script"))() 
     end
 })
 
+   
