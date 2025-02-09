@@ -1,0 +1,186 @@
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+
+local Window = Fluent:CreateWindow({
+    Title = "motions script hub " .. Fluent.Version,
+    SubTitle = "by motion",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 460),
+    Acrylic = true,  -- The blur may be detectable, setting this to false disables blur entirely
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.LeftControl  -- Used when there's no MinimizeKeybind
+})
+
+Fluent:Notify({
+    Title = "Notification",
+    Content = "Fisch Multi-Script Hub Loaded!",
+    SubContent = "Made by 2xr and motion",  -- Optional
+    Duration = 6  -- Set to nil to make the notification not disappear
+})
+
+-- Create tabs
+local Tabs = {
+    Main = Window:AddTab({ Title = "fish 🐟", Icon = "" }),
+    BloxFruits = Window:AddTab({ Title = "🍎 Blox Fruits", Icon = "" }),
+    BeeSwarm = Window:AddTab({ Title = "🐝 Bee Swarm Simulator", Icon = "🐝" }),
+    Peroxide = Window:AddTab({ Title = "peroxide", Icon = "🍐" }),
+    MM2 = Window:AddTab({ Title = "mm2", Icon = "🔪" })
+}
+
+-- Main Tab Content
+Tabs.Main:AddParagraph({
+    Title = "Hello",
+    Content = "Hello"
+})
+
+Tabs.Main:AddButton({
+    Title = "Native lab",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Native-lab/Native/main/loader.lua"))()
+    end
+})
+
+Tabs.Main:AddButton({
+    Title = "Ronix Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/1255807d4f3b118b6636cfd3d386d8b8.lua"))()
+    end
+})
+
+Tabs.Main:AddButton({
+    Title = "Lunar Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/f6c9f276f7d6a7dd6edfd0173d7a211d.lua"))()
+    end
+})
+
+Tabs.Main:AddButton({
+    Title = "Draco Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/cdc8ffd74b2c33f6c9f47b85f4b77c45.lua"))()
+    end
+})
+
+Tabs.Main:AddButton({
+    Title = "Zenith Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Efe0626/ZenithHub/refs/heads/main/Loader"))()
+    end
+})
+
+-- Blox Fruits Tab Content
+Tabs.BloxFruits:AddButton({
+    Title = "alchemyhub",
+    Callback = function()
+        loadstring(game:HttpGet("https://scripts.alchemyhub.xyz"))()
+    end
+})
+
+Tabs.BloxFruits:AddButton({
+    Title = "Banana Cat Hub",
+    Callback = function()
+        repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+        getgenv().Key = "PASTE_KEY_HERE"  -- Set your key here
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaHub.lua"))()
+    end
+})
+
+-- Bee Swarm Tab Content
+Tabs.BeeSwarm:AddButton({
+    Title = "Verbal Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/VerbalHubz/Verbal-Hub/refs/heads/main/Bee%20Swarm%20Sim.Lua", true))()
+    end
+})
+
+Tabs.BeeSwarm:AddButton({
+    Title = "Kron_Hub",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/DevKron/Kron_Hub/refs/heads/main/version_1.0'))()
+    end
+})
+
+Tabs.BeeSwarm:AddButton({
+    Title = "Atlas Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Chris8889/atlasbss/main/script.lua"))()
+    end
+})
+
+-- Peroxide Tab Content
+Tabs.Peroxide:AddButton({
+    Title = "xtrey10x-hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/xtrey10x/xtrey10x-hub/main/Peroxide"))()
+    end
+})
+
+Tabs.Peroxide:AddButton({
+    Title = "key of xtrey hub",
+    Callback = function()
+        -- Set your key here
+        getgenv().Key = "Keyupdate5542"  -- Example key setup
+    end
+})
+
+-- MM2 Tab Content
+Tabs.MM2:AddButton({
+    Title = "solix",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Dexz00/DzHub/refs/heads/main/Jujutsu%20Infinite"))()
+    end
+})
+
+Tabs.MM2:AddButton({
+    Title = "swirl hub",
+    Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/FlamesGamesO/FlamezHub/refs/heads/main/mm2script.lua'), true))()
+    end
+})
+
+Tabs.MM2:AddButton({
+    Title = "forge hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Skzuppy/forge-hub/main/loader.lua"))()
+    end
+})
+
+Tabs.MM2:AddButton({
+    Title = "vertex hub",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/vertex-peak/vertex/refs/heads/main/loadstring'))()
+    end
+})
+
+Tabs.MM2:AddButton({
+    Title = "YARHM hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Joystickplays/psychic-octo-invention/main/yarhm.lua", true))()  
+    end
+})
+
+Tabs.MM2:AddButton({
+    Title = "kidatchi",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/KidichiHB/Kidachi/main/Scripts/MM2", true))()  
+    end
+})
+
+Tabs.MM2:AddButton({
+    Title = "mobile + pc script op",
+    Callback = function()
+        -- Best configs that don't kick you
+        _G.AutofarmSettings = {
+            AntiAfk = true, 
+            DelayFarm = 2.15,
+            ResetWhenFullBag = true,
+            CoinType = "BeachBall",
+            Disable3DRendering = false,
+            ImproveFPS = false,
+            StartAutofarm = false
+        }
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/NoCapital2/MM2Autofarm/main/script"))()  
+    end
+})
+
