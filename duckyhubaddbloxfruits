@@ -7,36 +7,32 @@ local Window = Fluent:CreateWindow({
     SubTitle = "by motion",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
-    Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
+    Acrylic = true,  -- The blur may be detectable, setting this to false disables blur entirely
     Theme = "Dark",
-    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
+    MinimizeKey = Enum.KeyCode.LeftControl  -- Used when there's no MinimizeKeybind
 })
 
-    Fluent:Notify({
-        Title = "Notification",
-        Content = "Fisch Multi-Script Hub Loaded!",
-        SubContent = "Made by 2xr", -- Optional
-        Duration = 6 -- Set to nil to make the notification not disappear
-    })
+Fluent:Notify({
+    Title = "Notification",
+    Content = "Fisch Multi-Script Hub Loaded!",
+    SubContent = "Made by 2xr",  -- Optional
+    Duration = 6  -- Set to nil to make the notification not disappear
+})
 
---Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
+-- Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
-    Main = Window:AddTab({ Title = "✅ Main", Icon = "" }),
+    Main = Window:AddTab({ Title = "fish 🐟", Icon = "" }),
+    BloxFruits = Window:AddTab({ Title = "🍎 Blox Fruits", Icon = "" }),
+    BeeSwarm = Window:AddTab({ Title = "🐝 Bee Swarm Simulator", Icon = "🐝" })
 }
 
-    Tabs.Main:AddParagraph({
-        Title = "Hello",
-        Content = "Hello"
-    })
+-- Add content to the Main Tab
+Tabs.Main:AddParagraph({
+    Title = "Hello",
+    Content = "Hello"
+})
 
-local Options = Fluent.Options
-
-
-
-local Tabs = {
-    Main = Window:AddTab({ Title = "🐟 Fisch", Icon = "" }),
-}   
-
+-- Add buttons to Main Tab
 Tabs.Main:AddButton({
     Title = "Native lab",
     Callback = function()
@@ -59,7 +55,7 @@ Tabs.Main:AddButton({
 })
 
 Tabs.Main:AddButton({
-    Title = "Draco Hub]",
+    Title = "Draco Hub",
     Callback = function()
         loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/cdc8ffd74b2c33f6c9f47b85f4b77c45.lua"))()
     end
@@ -72,6 +68,7 @@ Tabs.Main:AddButton({
     end
 })
 
+-- Add more buttons to the Main Tab
 Tabs.Main:AddButton({
     Title = "Speed Hub X",
     Callback = function()
@@ -100,211 +97,143 @@ Tabs.Main:AddButton({
     end
 })
 
-Tabs.Main:AddButton({
-    Title = "Switch hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/londnee/code/refs/heads/main/Fisch.lua"))()
-    end
-})
-
-Tabs.Main:AddButton({
-    Title = "Bonk Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://bonkhubloader.netlify.app",true))()
-    end
-})
-
-Tabs.Main:AddButton({
-    Title = "Solix Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/debunked69/Solixreworkkeysystem/refs/heads/main/solix%20new%20keyui.lua"))()
-    end
-})
-
-Tabs.Main:AddButton({
-    Title = "Average Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://gist.githubusercontent.com/AverageHub/1980eccce4133d77fb24d166dc296125/raw/2d9c88acc21a302d92aed0e8b6f0dcd287c8b96b/gistfile1.txt"))()
-    end
-})
-
-Tabs.Main:AddButton({
-    Title = "Moon X",
-    Callback = function()
-        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/cba17b913ee63c7bfdbb9301e2d87c8b.lua"))()
-    end
-})
-
-Tabs.Main:AddButton({
-    Title = "Mean Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Alton012/Fisch.Script/refs/heads/main/Mean%20Hub"))()
-    end
-})
-
-Tabs.Main:AddButton({
-    Title = "Infinity Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Droidlol/Infinity/refs/heads/main/Infinity.lua"))()
-    end
-})
-
-Tabs.Main:AddButton({
-    Title = "Mercury Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c019f214a19894b50f0b8e817b70d25f.lua"))()
-    end
-})
-
-Tabs.Main:AddButton({
-    Title = "Goomba Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/JustLevel/goombahub/main/fisch.lua"))()
-    end
-})
-
-Tabs.Main:AddButton({
-    Title = "Flow Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/aviorety/Flow/refs/heads/main/Loader.lua"))()
-    end
-})
-
-Tabs.Main:AddButton({
-    Title = "Hidden Revamp",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/tulontop/HiddenRevamp/refs/heads/main/Loader.luau"))()
-    end
-})
-
-Tabs.Main:AddButton({
-    Title = "Alchemy Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://scripts.alchemyhub.xyz"))()
-    end
-})
-
-Tabs.Main:AddButton({
-    Title = "Nebora.org",
-    Callback = function()
-        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/499fa8eaaae391c6c3c77f2640811357.lua"))()
-    end
-})
-
-Tabs.Main:AddButton({
-    Title = "Project Spectrum",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/xZPUHigh/Project-Spectrum/main/Loader.lua"))()
-    end
-})
-
-Tabs.Main:AddButton({
-    Title = "Forge Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Skzuppy/forge-hub/main/loader.lua"))()
-    end
-})
-
-Tabs.Main:AddButton({
-    Title = "Lythicals",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Lythicals/script/main/Fisch.lua"))()
-    end
-})
-local Tabs = {
-    Main = Window:AddTab({ Title = "blox fruits", Icon = "🍎" }),
-}
-Tabs.Main:AddButton({
+-- Add buttons to Blox Fruits Tab
+Tabs.BloxFruits:AddButton({
     Title = "alchemyhub",
     Callback = function()
         loadstring(game:HttpGet("https://scripts.alchemyhub.xyz"))()
     end
 })
-Tabs.Main:AddButton({
+
+Tabs.BloxFruits:AddButton({
     Title = "Banana Cat Hub",
     Callback = function()
         repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
-getgenv().Key = "PASTE_KEY_HERE"
-loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaHub.lua"))()
+        getgenv().Key = "PASTE_KEY_HERE"
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaHub.lua"))()
     end
 })
-Tabs.Main:AddButton({
+
+Tabs.BloxFruits:AddButton({
     Title = "Speed Hub X",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"))()
     end
 })
-Tabs.Main:AddButton({
+
+Tabs.BloxFruits:AddButton({
     Title = "Raito Hub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Efe0626/RaitoHub/main/Script"))()
     end
 })
-Tabs.Main:AddButton({
+
+Tabs.BloxFruits:AddButton({
     Title = "Ho ho hub",
     Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/ascn123/HOHO_H/main/Loading_UI'))()
     end
 })
-Tabs.Main:AddButton({
+
+Tabs.BloxFruits:AddButton({
     Title = "inf chest script",
     Callback = function()
-        _G.Team = "Marine" -- "Marine" or "Pirate"
-_G.MetodeTeleport = "Instant" --"Instant" or "Tween"
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ThundarZ/Welcome/refs/heads/main/Main/BloxFruit/Chest/AllDevices.lua"))()
+        _G.Team = "Marine"  -- "Marine" or "Pirate"
+        _G.MetodeTeleport = "Instant"  -- "Instant" or "Tween"
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ThundarZ/Welcome/refs/heads/main/Main/BloxFruit/Chest/AllDevices.lua"))()
     end
 })
-Tabs.Main:AddButton({
+
+Tabs.BloxFruits:AddButton({
     Title = "W-azure hub",
     Callback = function()
         loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
     end
 })
-Tabs.Main:AddButton({
+
+Tabs.BloxFruits:AddButton({
     Title = "Redz hub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))()
     end
 })
-Tabs.Main:AddButton({
+
+Tabs.BloxFruits:AddButton({
     Title = "ronix hub",
     Callback = function()
         loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/513ccdb3ae8a61d4d7698fc337e5256d.lua"))()
     end
 })
-Tabs.Main:AddButton({
-    Title = "get every thing script",
+
+Tabs.BloxFruits:AddButton({
+    Title = "get everything script",
     Callback = function()
         getgenv().simple_settings = {
-    ["MASTERY"] = {
-        ["ACTIVE"] = true,
-        ["METHOD"] = "Half", -- Method for gaining mastery, "Half"[300] or "Full"[600]
-    },
-    ["OBJECTIVE"] = {
-        ["GODHUMAN"] = true,
-        ["RACE-V3"] = true,race to V3 if possible Human, Mink, (Fishman, Ghoul, Cyborg) soon
-        ["FRAGMENT"] = 100000,
-        -- SWORD
-        ["CANVANDER"] = true,
-        ["BUDDY-SWORD"] = true,
-        ["CURSED-DUAL-KATANA"] = true,
-        ["SHARK-ANCHOR"] = true, -- soon.
-        --GUN
-        ["ACIDUM-RIFLE"] = true,
-        ["VENOM-BOW"] = true,
-        ["SOUL-GUITAR"] = true,
-    },
-    ["FRUITPURCHASE"] = true,
-    ["PRIORITYFRUIT"] = {
-        [1] = "Dragon-Dragon",
-        [2] = "Flame-Flame",
-        [3] = "Rumble-Rumble",
-        [4] = "Human-Human: Buddha",
-        [5] = "Dark-Dark",
-    },
-    ["FPSCAP"] = 30,
-    ["LOWTEXTURE"] = true
-}
-loadstring(game:HttpGet("https://raw.githubusercontent.com/simple-hubs/contents/refs/heads/main/bloxfruit-kaitan-main.lua"))()
+            ["MASTERY"] = {
+                ["ACTIVE"] = true,
+                ["METHOD"] = "Half",  -- Method for gaining mastery, "Half"[300] or "Full"[600]
+            },
+            ["OBJECTIVE"] = {
+                ["GODHUMAN"] = true,
+                ["RACE-V3"] = true,
+                ["FRAGMENT"] = 100000,
+                -- SWORD
+                ["CANVANDER"] = true,
+                ["BUDDY-SWORD"] = true,
+                ["CURSED-DUAL-KATANA"] = true,
+                ["SHARK-ANCHOR"] = true,  -- soon.
+                -- GUN
+                ["ACIDUM-RIFLE"] = true,
+                ["VENOM-BOW"] = true,
+                ["SOUL-GUITAR"] = true,
+            },
+            ["FRUITPURCHASE"] = true,
+            ["PRIORITYFRUIT"] = {
+                [1] = "Dragon-Dragon",
+                [2] = "Flame-Flame",
+                [3] = "Rumble-Rumble",
+                [4] = "Human-Human: Buddha",
+                [5] = "Dark-Dark",
+            },
+            ["FPSCAP"] = 30,
+            ["LOWTEXTURE"] = true
+        }
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/simple-hubs/contents/refs/heads/main/bloxfruit-kaitan-main.lua"))()
+    end
+})
+
+-- Add buttons to Bee Swarm Simulator Tab
+Tabs.BeeSwarm:AddButton({
+    Title = "Verbal Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/VerbalHubz/Verbal-Hub/refs/heads/main/Bee%20Swarm%20Sim.Lua", true))()
+    end
+})
+
+Tabs.BeeSwarm:AddButton({
+    Title = "Kron_Hub",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/DevKron/Kron_Hub/refs/heads/main/version_1.0'))()
+    end
+})
+
+Tabs.BeeSwarm:AddButton({
+    Title = "Atlas Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Chris8889/atlasbss/main/script.lua"))()
+    end
+})
+
+Tabs.BeeSwarm:AddButton({
+    Title = "Macro V3",
+    Callback = function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/bc8c5c45c26f8e4cdb060277b0bbcab7.lua"))()
+    end
+})
+
+Tabs.BeeSwarm:AddButton({
+    Title = "Histy Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/Histy"))()
     end
 })
