@@ -24,19 +24,19 @@ Fluent:Notify({
 
 -- Define all tabs at once
 local Tabs = {
-    Main = Window:AddTab({ Title = "      🐟fish ", Icon = "" }),
-    BloxFruits = Window:AddTab({ Title =  "🍎 Blox Fruits", Icon = "" }),
-    BeeSwarm = Window:AddTab({ Title =   "🐝 Bee Swarm Simulator", Icon = "🐝" }),
-    Peroxide = Window:AddTab({ Title =   "🍐peroxide", Icon = "🍐" }),
-    MM2 = Window:AddTab({ Title = "       🔪 mm2", Icon = "🔪" }),
-    AdoptMe = Window:AddTab({ Title = "   🐕adopt me ", Icon = "" }),
-    SouthBronx = Window:AddTab({ Title = "🎭south bronx", Icon = "" }),
-    Universals = Window:AddTab({ Title = "🌌universals", Icon = "" }),
-    GunFightArena = Window:AddTab({ Title = "🔫gun fight arena", Icon = "" }),
-    MainTab = Window:AddTab({ Title = "⚙️ Main", Icon = "" }),
-    Hoopz = Window:AddTab({ Title = "hoopz", Icon = "" }),
+    Main = Window:AddTab({ Title = "        fish ", Icon = "" }),
+    BloxFruits = Window:AddTab({ Title =  " Blox Fruits", Icon = "" }),
+    BeeSwarm = Window:AddTab({ Title =   "  Bee Swarm Simulator", Icon = "🐝" }),
+    Peroxide = Window:AddTab({ Title =   "  peroxide", Icon = "🍐" }),
+    MM2 = Window:AddTab({ Title = "         mm2", Icon = "🔪" }),
+    AdoptMe = Window:AddTab({ Title = "     adopt me ", Icon = "" }),
+    SouthBronx = Window:AddTab({ Title = "  south bronx", Icon = "" }),
+    Universals = Window:AddTab({ Title = "  universals", Icon = "" }),
+    GunFightArena = Window:AddTab({ Title ="gun fight arena", Icon = "" }),
+    MainTab = Window:AddTab({ Title = "     Main", Icon = "" }),
+    Hoopz = Window:AddTab({ Title = "       hoopz", Icon = "" }),
     NinjaLegends = Window:AddTab({ Title = "ninja legends", Icon = "" }),
-    Rivals = Window:AddTab({ Title = "rivals", Icon = "" }),
+    Rivals = Window:AddTab({ Title = "      rivals", Icon = "" }),
 }
 
 -- Add content to the Main Tab
