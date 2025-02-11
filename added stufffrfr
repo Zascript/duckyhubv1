@@ -1,7 +1,9 @@
+-- Load Fluent and its dependencies
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
+-- Create the main window
 local Window = Fluent:CreateWindow({
     Title = "motions script hub " .. Fluent.Version,
     SubTitle = "by motion",
@@ -12,6 +14,7 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.LeftControl  -- Used when there's no MinimizeKeybind
 })
 
+-- Notify the user that the script has loaded
 Fluent:Notify({
     Title = "Notification",
     Content = "Fisch Multi-Script Hub Loaded!",
@@ -33,6 +36,7 @@ local Tabs = {
     MainTab = Window:AddTab({ Title = "⚙️ Main", Icon = "" }),
     Hoopz = Window:AddTab({ Title = "hoopz", Icon = "" }),
     NinjaLegends = Window:AddTab({ Title = "ninja legends", Icon = "" }),
+    Rivals = Window:AddTab({ Title = "rivals", Icon = "" }),
 }
 
 -- Add content to the Main Tab
@@ -494,5 +498,48 @@ Tabs.NinjaLegends:AddButton({
     Title = "venture hub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader"))()
+    end
+})
+
+-- Add buttons to Rivals Tab
+Tabs.Rivals:AddButton({
+    Title = "flameware",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/EzWinsV4/FlameForRobloxRivals/refs/heads/main/NewMain.lua", true))()
+    end
+})
+
+Tabs.Rivals:AddButton({
+    Title = "8bit",
+    Callback = function()
+        loadstring(game:HttpGet("https://get-8bit.freewebhostmost.com/scripts/?script=rivalsv3.lua"))()
+    end
+})
+
+Tabs.Rivals:AddButton({
+    Title = "Tbao hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubRivals"))()
+    end
+})
+
+Tabs.Rivals:AddButton({
+    Title = "kikahook",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/kiciahook/kiciahook/refs/heads/main/loader.lua"))()
+    end
+})
+
+Tabs.Rivals:AddButton({
+    Title = "5oxin",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/5oxin/Phantom/main/main"))()
+    end
+})
+
+Tabs.Rivals:AddButton({
+    Title = "azure modded",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded"))()
     end
 })
