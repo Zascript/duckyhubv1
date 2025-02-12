@@ -6,7 +6,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 -- Create the main window
 local Window = Fluent:CreateWindow({
     Title = "motions script hub " .. Fluent.Version,
-    SubTitle = "by motion",
+    SubTitle = "by motion & 2xr 💗",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = true,  -- The blur may be detectable, setting this to false disables blur entirely
@@ -599,5 +599,11 @@ Tabs.Peroxide:AddButton({
             Content = "Key copied to clipboard!",
             Duration = 3
         })
+    end
+})
+Tabs.Universals:AddButton({
+    Title = "inf yeild",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
     end
 })
