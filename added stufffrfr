@@ -24,19 +24,20 @@ Fluent:Notify({
 
 -- Define all tabs at once
 local Tabs = {
-    Main = Window:AddTab({ Title = "        fish ", Icon = "" }),
-    BloxFruits = Window:AddTab({ Title =  " Blox Fruits", Icon = "" }),
-    BeeSwarm = Window:AddTab({ Title =   "  Bee Swarm Simulator", Icon = "🐝" }),
-    Peroxide = Window:AddTab({ Title =   "  peroxide", Icon = "🍐" }),
-    MM2 = Window:AddTab({ Title = "         mm2", Icon = "🔪" }),
-    AdoptMe = Window:AddTab({ Title = "     adopt me ", Icon = "" }),
-    SouthBronx = Window:AddTab({ Title = "  south bronx", Icon = "" }),
-    Universals = Window:AddTab({ Title = "  universals", Icon = "" }),
-    GunFightArena = Window:AddTab({ Title ="gun fight arena", Icon = "" }),
-    MainTab = Window:AddTab({ Title = "     Main", Icon = "" }),
-    Hoopz = Window:AddTab({ Title = "       hoopz", Icon = "" }),
+    Main = Window:AddTab({ Title = "      🐟fish ", Icon = "" }),
+    BloxFruits = Window:AddTab({ Title =  "🍎 Blox Fruits", Icon = "" }),
+    BeeSwarm = Window:AddTab({ Title =   "🐝 Bee Swarm Simulator", Icon = "🐝" }),
+    Peroxide = Window:AddTab({ Title =   "🍐peroxide", Icon = "🍐" }),
+    MM2 = Window:AddTab({ Title = "       🔪 mm2", Icon = "🔪" }),
+    AdoptMe = Window:AddTab({ Title = "   🐕adopt me ", Icon = "" }),
+    SouthBronx = Window:AddTab({ Title = "🎭south bronx", Icon = "" }),
+    Universals = Window:AddTab({ Title = "🌌universals", Icon = "" }),
+    GunFightArena = Window:AddTab({ Title = "🔫gun fight arena", Icon = "" }),
+    MainTab = Window:AddTab({ Title = "⚙️ Main", Icon = "" }),
+    Hoopz = Window:AddTab({ Title = "hoopz", Icon = "" }),
     NinjaLegends = Window:AddTab({ Title = "ninja legends", Icon = "" }),
-    Rivals = Window:AddTab({ Title = "      rivals", Icon = "" }),
+    Rivals = Window:AddTab({ Title = "rivals", Icon = "" }),
+    DahHood = Window:AddTab({ Title = "dah hood", Icon = "" }),
 }
 
 -- Add content to the Main Tab
@@ -257,14 +258,6 @@ Tabs.Peroxide:AddButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xtrey10x/xtrey10x-hub/main/Peroxide"))()
     end
 })
-
-Tabs.Peroxide:AddButton({
-    Title = "Current Key: Keyupdate5542",
-    Callback = function()
-        -- Do nothing, just display the key
-    end
-})
-
 -- Add buttons to MM2 Tab
 Tabs.MM2:AddButton({
     Title = "solix",
@@ -356,6 +349,13 @@ Tabs.Universals:AddButton({
     end
 })
 
+Tabs.Universals:AddButton({
+    Title = "whimper kitty",
+    Callback = function()
+        loadstring(game:HttpGet('https://whimper.xyz/kitty'))()
+    end
+})
+
 -- Add buttons to Gun Fight Arena Tab
 Tabs.GunFightArena:AddButton({
     Title = "Tbao",
@@ -411,6 +411,27 @@ Tabs.MainTab:AddButton({
         else
             warn("Failed to load Speed Booster script.")
         end
+    end
+})
+
+Tabs.DahHood:AddButton({
+    Title = "Anti v2",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/flanchhh/AntiV2/refs/heads/main/Anti%20v2.lua"))();
+    end
+})
+
+Tabs.DahHood:AddButton({
+    Title = "script hub kitten",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/scripthubekitten/SCRIPTHUBV3/main/SCRIPTHUBV3", true))()
+    end
+})
+
+Tabs.DahHood:AddButton({
+    Title = "⚠️ DONT USE FLY WITH ^",
+    Callback = function()
+        
     end
 })
 
@@ -541,5 +562,42 @@ Tabs.Rivals:AddButton({
     Title = "azure modded",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded"))()
+    end
+})
+
+-- Add buttons to DahHood Tab
+Tabs.DahHood:AddButton({
+    Title = "didy gui",
+    Callback = function()
+        loadstring(game:HttpGet("https://diddysmansion.vip/loaderforotherexploits.lucid"))()
+    end
+})
+
+Tabs.DahHood:AddButton({
+    Title = "plolyaca",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/pixelheadx/Polakya/main/Bestscript.md"))()
+    end
+})
+Tabs.DahHood:AddButton({
+    Title = "Copy key for didy hub",
+    Callback = function()
+        setclipboard("https://discord.gg/y5QMWBcE")
+        Fluent:Notify({
+            Title = "Notification",
+            Content = "Script copied to clipboard!",
+            Duration = 3
+        })
+    end
+})
+Tabs.Peroxide:AddButton({
+    Title = "Copy Key",
+    Callback = function()
+        setclipboard("Current Key: Keyupdate5542")
+        Fluent:Notify({
+            Title = "Notification",
+            Content = "Key copied to clipboard!",
+            Duration = 3
+        })
     end
 })
